@@ -26,9 +26,9 @@ description = data["weather"][0]["description"]
 
 
 slack_city = {"text": city.upper()}
-slack_temp = {"text": "Temperature : {}deg Celsius".format(temp)}
-slack_windspeed = {"text": "Wind Speed: {}m/s".format(wind_speed)}
-slack_humidity = {"text": "Humidity : {}%".format(humidity)}
+slack_temp = {"text": "Temperature : {} deg Celsius".format(temp)}
+slack_windspeed = {"text": "Wind Speed: {} m/s".format(wind_speed)}
+slack_humidity = {"text": "Humidity : {} %".format(humidity)}
 slack_description = {"text": "Description : {}".format(description)}
 
 
