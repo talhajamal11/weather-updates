@@ -12,7 +12,7 @@ web_hook_url = (
 
 
 city = "Islamabad"
-url = "http://api.openweathermap.org/data/2.5/weather?q={},pk&APPID=d58366f88671fbbb22b4cc69734c45ba".format(
+url = "http://api.openweathermap.org/data/2.5/weather?q={},pk&units=metric&APPID=d58366f88671fbbb22b4cc69734c45ba".format(
     city
 )
 
@@ -25,10 +25,10 @@ wind_speed = data["wind"]["speed"]
 description = data["weather"][0]["description"]
 
 
-slack_city = {"text": city}
-slack_temp = {"text": "Temperature : {}".format(temp)}
-slack_windspeed = {"text": "Wind Speed: {}".format(wind_speed)}
-slack_humidity = {"text": "Humidity : {}".format(humidity)}
+slack_city = {"text": city.upper()}
+slack_temp = {"text": "Temperature : {}deg Celsius".format(temp)}
+slack_windspeed = {"text": "Wind Speed: {}m/s".format(wind_speed)}
+slack_humidity = {"text": "Humidity : {}%".format(humidity)}
 slack_description = {"text": "Description : {}".format(description)}
 
 
